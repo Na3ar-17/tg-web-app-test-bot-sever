@@ -4,9 +4,9 @@ import { IFormDetails } from './types/data.types'
 
 dotenv.config()
 
-const token = process.env.BOT_API_TOKEN
-const bot: TelegramBot = new TelegramBot(token || '', { polling: true })
-const webAppUrl = 'https://tg-web-app-test-bot.vercel.app/'
+const token = process.env.BOT_API_TOKEN || ''
+const bot: TelegramBot = new TelegramBot(token, { polling: true })
+const webAppUrl = process.env.WEB_APP_URL || ''
 
 async function main() {
 	bot.on('message', async (msg: Message) => {
