@@ -7,13 +7,13 @@ import { IFormDetails, IWebData } from './types/data.types'
 
 dotenv.config()
 
-const token = process.env.BOT_API_TOKEN || ''
-const bot: TelegramBot = new TelegramBot(token, { polling: true })
-const webAppUrl = process.env.WEB_APP_URL || ''
-
-const app: Express = express()
-
 async function main() {
+	const token = process.env.BOT_API_TOKEN || ''
+	const bot: TelegramBot = new TelegramBot(token, { polling: true })
+	const webAppUrl = process.env.WEB_APP_URL || ''
+
+	const app: Express = express()
+
 	app.use(bodyParser.json())
 	app.use(
 		cors({
