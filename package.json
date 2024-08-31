@@ -4,7 +4,7 @@
 	"main": "main.ts",
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc && yarn",
+		"build": "yarn && tsc",
 		"start:prod": "node ./dist/src/main.js",
 		"dev": "ts-node-dev --respawn --transpile-only --exit-child -r tsconfig-paths/register src/main.ts"
 	},
