@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsc",
-		"start:prod": "node dist/main.js",
+		"start:prod": "node dist/src/main",
 		"dev": "ts-node-dev --respawn --transpile-only --exit-child -r tsconfig-paths/register src/main.ts"
 	},
 	"dependencies": {
