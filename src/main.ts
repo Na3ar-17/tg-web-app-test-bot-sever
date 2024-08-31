@@ -33,6 +33,7 @@ async function main() {
 		if (msg.web_app_data?.data) {
 			try {
 				const data: IFormDetails = JSON.parse(msg.web_app_data.data)
+
 				await bot.sendMessage(chatId, 'Thanks for you details!')
 				await bot.sendMessage(chatId, `Your Name: ${data.name}`)
 				await bot.sendMessage(chatId, `Your Surname: ${data.surname}`)
